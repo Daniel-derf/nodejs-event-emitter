@@ -2,7 +2,7 @@ function Emitter() {
   this.events = {};
 }
 
-Emiter.prototype.on = function (type, listener) {
+Emitter.prototype.on = function (type, listener) {
   this.events[type] = this.events[type] || [];
   this.events[type].push(listener);
 };
@@ -15,4 +15,4 @@ Emitter.prototype.emit = function (type) {
   }
 };
 
-module.exports = Emitter;
+export default Emitter;

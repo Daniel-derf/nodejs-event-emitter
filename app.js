@@ -1,6 +1,6 @@
-import Emitter from "./emmiter.js";
+import { EmitterClass } from "./emmiter.js";
 
-var emitter = new Emitter();
+var emitter = new EmitterClass();
 
 emitter.on("greet", function () {
   console.log("Somewhere, someone said hello.");

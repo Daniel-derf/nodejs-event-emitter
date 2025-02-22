@@ -15,4 +15,23 @@ Emitter.prototype.emit = function (type) {
   }
 };
 
-export default Emitter;
+class EmitterClass {
+  constructor() {
+    this.events = {};
+  }
+
+  on(type, listener) {
+    this.events[type] = this.events[type] ?? [];
+    this.events[type].push(listener);
+  }
+
+  emit(type) {
+    if (this.events[type]) {
+      for (const event of this.events[type]) {
+        event.call();
+      }
+    }
+  }
+}
+
+export { Emitter, EmitterClass };

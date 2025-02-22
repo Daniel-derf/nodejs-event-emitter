@@ -1,6 +1,6 @@
 import { EmitterClass } from "./emmiter.js";
 
-var emitter = new EmitterClass();
+const emitter = new EmitterClass();
 
 emitter.on("greet", function () {
   console.log("Somewhere, someone said hello.");
